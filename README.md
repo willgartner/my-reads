@@ -2,6 +2,7 @@
 
 ## To Install and Run the Application
 * Clone the github repo at https://github.com/willgartner/my-reads.git
+* cd to 'my-reads'
 * Run '''npm install'''
 * Application can be run with '''npm start''' and accessed at http://localhost:3000
 
