@@ -1,5 +1,32 @@
 # MyReads Project
 
+## To Install and Run the Application
+* Clone the github repo at https://github.com/willgartner/my-reads.git
+* Run '''npm install'''
+* Application can be run with '''npm start''' and accessed at http://localhost:3000
+
+## Application Description
+The application page (App.js) contains routes to two pages
+* The main bookcase (Bookcase.js)
+  * The bookcase iterates shelves (Shelf.js) for books in each category
+    * Each shelf contains the appropriate books (Books.js)
+* The search page (SeachPage.js)
+  * The SearchPage contains the Shelf (SearchShelf.js) that displays search results
+    * The SearchShelf contains the appropriate books (Books.js)
+
+## Data Flow
+* Both the 'Books' array and and 'updateBooks' method are iterated to both the main bookcase and the search page.
+* On both the main bookcase and the search page the 'updateBooks' method is passed all the way down to the Book level to be used in the menu selection update.
+* On the main page, the books array is filtered for the appropriate shelf and the filtered array is passed to each shelp as an argument.
+* On the search page, the books array is used to compare to search reaults and set the proper 'shelf' location in the book selection menu.
+* On the search page, the search results are passed down for display into the serach shelf.
+        
+## Notes
+
+* A throttle is being used in the search query and results display to make the search process more efficient.
+
+## Starter Read Me
+
 This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
 
 Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
